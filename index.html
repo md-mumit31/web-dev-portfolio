@@ -4,109 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My website Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles/portfolio-styles.css">
+    <title>MD.Abdul Mumit Ibne Hossain | Portfolio</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/portfolio-styles.css">
 </head>
 
-<body class="open-sans-normal">
-     <section id="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm MD.Abdul Mumit Ibne Hossain 👋</h1>
-            <p>Front-End Developer | Web Enthusiast | Open Source Contributor</p>
-            <a href="#projects" class="btn">View My Work</a>
-            <div class="social-links">
-                <a href="https://github.com/md-mumit31" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/md-mumit31/" target="_blank">LinkedIn</a>
-                <a href="mailto:mdmumithossain31@gmail.com">Email</a>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Mumin</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-        </div>
-    </section>
-    <header class="header">
-        <nav>
-            <h3 class="nav-title">MD <span class="primary">Mumit</span> Hossain</h3>
-            <ul>
-                <li><a class="dark-2" href="#about">About Me</a></li>
-                <li><a class="dark-2" href="#projects">Projects</a></li>
-                <li><a href="#contact"><button class="btn-primary">Hire ME</button></a></li>
-
+            <ul class="nav no-search">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
         </nav>
-        <div class="banner">
-            <div class="banner-text">
-                <h4 class="banner-greet dark-2">Hi, I'm </h4>
-                <h1 class="banner-title">Mumit Hossain</h1>
-                <p class="banner-description">I specialize in creating responsive and user-friendly websites that
-                    help businesses establish a strong online presence.</p>
-                <button class="btn-primary">Download CV</button>
-                <button class="btn-primary">Contact Me</button>
-            </div>
-            <img class="profile-image" src="images/Mumit.PNG" alt="">
-
-        </div>
     </header>
-    <main>
-        <section class="about secondary-bg" >
-            <h2 class="section-title dark-2">About Me</h2>
-            <p class="section-description">I am a passionate web developer with experience in building dynamic
-                and responsive websites. My expertise includes HTML, CSS, JavaScript, and various web development
-                frameworks. I enjoy creating user-friendly interfaces and ensuring optimal performance across all
-                devices.</p>
-        </section>
 
-        <!-- Projects Section -->
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-container">
+            <img src="images/profile.jpg" alt="MD.Abdul Mumit Ibne Hossain" class="profile-img" data-aos="fade-right">
+            <div class="hero-text" data-aos="fade-left">
+                <h1>Hi, I'm <span id="typed-name"></span> </h1>
+                <p>Front-End Developer | Building Modern & Responsive Web Apps</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/md-mumit31" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/md-mumit31/" target="_blank">LinkedIn</a>
+                    <a href="mailto:mdmumithossain31@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects">
-        <h2>My Projects</h2>
+        <h2 data-aos="fade-up">My Projects</h2>
         <div class="projects-container">
-            <div class="project-card">
+            <div class="project-card" data-aos="zoom-in">
                 <h3>Portfolio Website</h3>
-                <p>My personal portfolio showcasing projects & skills</p>
+                <p>Personal portfolio showcasing projects & skills.</p>
                 <a href="#" target="_blank" class="btn">Live Demo</a>
             </div>
-            <div class="project-card">
-                <h3>Project 2</h3>
-                <p>Short description</p>
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>AI Fitness Tracker</h3>
+                <p>Modern responsive app application using Flutter</p>
                 <a href="#" target="_blank" class="btn">Live Demo</a>
             </div>
-            <div class="project-card">
-                <h3>Project 3</h3>
-                <p>Short description</p>
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Employee Management System</h3>
+                <p>Maintaining Standard CRUD function and SDLC</p>
                 <a href="#" target="_blank" class="btn">Live Demo</a>
             </div>
         </div>
     </section>
 
-        <div class="about-items">
-            <div class="about-item">
-                <p class="about-title">Name</p>
-                <p class="about-description">Md.Abdul Mumit</p>
-            </div>
-            <div class="about-item">
-                <p class="about-title">E-mail</p>
-                <p class="about-description">mdmumithossain31@gmail.com</p>
-            </div>
-            <div class="about-item">
-                <p class="about-title">Date of Birth</p>
-                <p class="about-description">12-12-2001</p>
-            </div>
-            <div class="about-item">
-                <p class="about-title">From</p>
-                <p class="about-description">Bandartilla,Chittagong</p>
-            </div>
-
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 data-aos="fade-up">My Skills</h2>
+        <div class="skills-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Bootstrap / Tailwind</div>
         </div>
+    </section>
 
-        
-        </main> 
-        <footer>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 data-aos="fade-up">Contact Me</h2>
+        <p data-aos="fade-up">Feel free to reach out via email or LinkedIn.</p>
+        <div class="social-links" data-aos="fade-up" data-aos-delay="100">
+            <a href="mailto:mdmumithossain31@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/md-mumit31/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/md-mumit31" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
         <p>© 2025 MD.Abdul Mumit Ibne Hossain. All rights reserved.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+    <!-- Typed.js for hero typing effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('#typed-name', {
+            strings: ["MD.Abdul Mumit Ibne Hossain"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
 
 </body>
 
