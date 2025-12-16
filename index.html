@@ -5,13 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MD.Abdul Mumit Ibne Hossain | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- AOS Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/portfolio-styles.css">
 </head>
 
 <body>
+    <div id="scroll-progress"></div>
+
     <!-- Header / Navbar -->
     <header>
         <nav class="navbar">
@@ -39,11 +47,19 @@
             <div class="hero-text" data-aos="fade-left">
                 <h1>Hi, I'm <span id="typed-name"></span> </h1>
                 <p>Front-End Developer | Building Modern & Responsive Web Apps</p>
+                <div class="hero-bio" data-aos="fade-up" data-aos-delay="200">
+                    <p class="lora-bio-text">
+                        I love exploring new technologies, solving problems, and
+                        building things that make a positive impact. I embrace challenges, strive to improve every day,
+                        and aim to inspire others along the way.
+                    </p>
+                </div>
+
                 <div class="hero-buttons">
                     <a href="#projects" class="btn">View My Work</a>
                     <a href="#contact" class="btn btn-outline">Contact Me</a>
                 </div>
-                <div class="social-links">
+                <div class="social-links-hero">
                     <a href="https://github.com/md-mumit31" target="_blank">GitHub</a>
                     <a href="https://www.linkedin.com/in/md-mumit31/" target="_blank">LinkedIn</a>
                     <a href="mailto:mdmumithossain31@gmail.com">Email</a>
@@ -100,11 +116,31 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2 data-aos="fade-up">Contact Me</h2>
-        <p data-aos="fade-up">Feel free to reach out via email or LinkedIn.</p>
+        <p data-aos="fade-up">Feel free to reach out on any platform below.</p>
+
         <div class="social-links" data-aos="fade-up" data-aos-delay="100">
-            <a href="mailto:mdmumithossain31@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/md-mumit31/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/md-mumit31" target="_blank">GitHub</a>
+
+            <a href="#" class="social-item" id="copy-email">
+                <i class="fas fa-envelope"></i>
+                <span id="email-text">mdmumithossain31@gmail.com</span>
+            </a>
+
+
+            <a href="https://www.linkedin.com/in/md-mumit31/" target="_blank" class="social-item">
+                <i class="fab fa-linkedin"></i></a>
+
+            <a href="https://github.com/md-mumit31" target="_blank" class="social-item">
+                <i class="fab fa-github"></i></a>
+
+            <a href="https://www.facebook.com/mohammed.mumin.hossain/" target="_blank" class="social-item">
+                <i class="fab fa-facebook"></i></a>
+
+            <a href="https://www.instagram.com/md_abdul_mumit/" target="_blank" class="social-item">
+                <i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/8801403339370" target="_blank" class="social-item whatsapp">
+                <i class="fab fa-whatsapp"></i> </a>
+
+
         </div>
     </section>
 
@@ -114,13 +150,13 @@
     </footer>
 
     <!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<!-- Typed.js -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-<!-- Custom JS -->
-<script src="styles/script.js"></script>
+    <!-- Custom JS -->
+    <script src="styles/script.js"></script>
 
 
 

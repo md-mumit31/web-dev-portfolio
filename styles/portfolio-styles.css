@@ -7,6 +7,8 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+
+
 body {
     background-image: url('../images/background.jpg');
     background-size: cover;
@@ -278,31 +280,77 @@ footer {
     .hero-container {
         flex-direction: column;
     }
+      .hero-bio {
+        max-width: 100%;
+        padding: 20px 15px;
+    }
 
+    .hero-bio p {
+        font-size: 1rem;
+    }
+
+    .hero-bio .tagline {
+        font-size: 0.9rem;
+    }
+
+    .hero-bio .bio-text {
+        font-size: 0.9rem;
+    }
     .menu-toggle {
         display: flex;
         z-index: 1001;
     }
 
     .nav {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
-        width: 100%;
         position: absolute;
-        top: 60px;
+        top: 70px;
         left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        z-index: 1000;
     }
 
     .nav.active {
-        display: flex;
+        max-height: 500px;
+        opacity: 1;
     }
 
     .nav li {
         margin: 15px 0;
         text-align: center;
     }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
 }
+
+
+@media (max-width: 480px) {
+    .social-links {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+        padding: 0 5px;
+    }
+
+    .social-item {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+
+    .social-item i {
+        font-size: 0.9rem;
+    }
+}
+
 
 
 /* CV Download Section */
@@ -316,3 +364,205 @@ footer {
     color: #ffffffcc;
     margin-bottom: 25px;
 }
+
+
+/* Hamburger animation */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-toggle .bar {
+    transition: all 0.3s ease;
+}
+
+
+/* Navbar scroll effect */
+header.scrolled {
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+header.hide {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #a8ff60, #4ade80, #22c55e);
+    z-index: 2000;
+}
+
+
+/* 3D Tilt Effect */
+.project-card {
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    will-change: transform;
+}
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Performance optimizations */
+.project-card,
+.skill,
+.btn {
+    will-change: transform;
+
+}
+
+
+/* Contact social links */
+.social-links-hero {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    margin: 0 10px;
+    color: #ffffffaa;
+    transition: 0.3s;
+
+
+}
+
+.social-links-hero a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffffffaa;
+    transition: 0.3s;
+}
+
+.social-links-hero a:hover {
+    color: #fffa65;
+
+}
+
+.social-links {
+    display: grid;
+    /* use grid instead of flex */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    max-width: 100%;
+    /* take full width on small screens */
+    margin: 20px auto 0;
+    padding: 0 10px;
+    /* small horizontal padding */
+}
+
+.social-item {
+    font-size: 0.85rem;
+    /* smaller font */
+    padding: 10px 12px;
+    /* smaller padding */
+    gap: 8px;
+    /* reduce icon-text gap */
+    border-radius: 12px;
+
+}
+
+.social-item i {
+    font-size: 2rem;
+    /* smaller icon */
+}
+
+/* Hover animation */
+.social-item:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 255, 150, 0.3);
+}
+
+/* Platform colors on hover */
+.social-item:hover .fa-envelope {
+    color: #facc15;
+}
+
+.social-item:hover .fa-linkedin {
+    color: #0a66c2;
+}
+
+.social-item:hover .fa-github {
+    color: #ffffff;
+}
+
+.social-item:hover .fa-facebook {
+    color: #1877f2;
+}
+
+.social-item:hover .fa-instagram {
+    color: #e1306c;
+}
+
+.social-item:hover .fa-whatsapp {
+    color: #25d366;
+}
+
+#copy-email {
+    cursor: pointer;
+}
+
+
+/* Hero Bio Glassmorphism */
+.hero-bio {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    padding: 25px 20px 0 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-bio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 255, 150, 0.3);
+}
+
+.hero-bio h1 {
+    font-size: 3rem;
+    margin-bottom: 8px;
+}
+
+.hero-bio .tagline {
+    font-size: 1.1rem;
+    color: #ffffffcc;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.hero-bio .bio-text {
+    font-size: 1rem;
+    color: #ffffffaa;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.lora-bio-text {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Hero Buttons already styled with .btn and .btn-outline */
+
