@@ -563,3 +563,9 @@ header.hide {
 }
 /* Hero Buttons already styled with .btn and .btn-outline */
 
+.btn:active,
+.social-item:active {
+    transform: scale(0.97); /* slight press effect */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* inset feel */
+    transition: transform 0.05s, box-shadow 0.05s;
+}

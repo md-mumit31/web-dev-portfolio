@@ -145,3 +145,10 @@ document.querySelectorAll(".btn").forEach(btn => {
     });
 });
 
+const tapSound = document.getElementById('tap-sound');
+document.querySelectorAll('.btn, .social-item,.nav,.cv').forEach(btn => {
+    btn.addEventListener('click', () => {
+        tapSound.currentTime = 0;
+        tapSound.play();
+    });
+});
