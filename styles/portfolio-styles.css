@@ -181,7 +181,8 @@ header {
 /* Glass Projects, Skills, Contact Sections */
 #projects,
 #skills,
-#contact {
+#contact,
+#cv {
     padding: 80px 20px;
     text-align: center;
     background: rgba(255, 255, 255, 0.05);
@@ -300,4 +301,16 @@ footer {
         margin: 15px 0;
         text-align: center;
     }
+}
+
+/* CV Download Section */
+
+#cv h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#cv p {
+    color: #ffffffcc;
+    margin-bottom: 25px;
 }
