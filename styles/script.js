@@ -1,21 +1,39 @@
-// Mobile menu toggle
-const mobileMenu = document.getElementById("mobile-menu");
-const nav = document.querySelector(".nav");
+document.addEventListener("DOMContentLoaded", () => {
 
-mobileMenu.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
-
-const menuToggle = document.getElementById('mobile-menu');
-  const navMenu = document.getElementById('nav-menu');
-
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-
-  // Close menu when clicking a link (mobile UX)
-  document.querySelectorAll('.nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
+  /* AOS init */
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      duration: 1000,
+      once: true
     });
-  });
+  }
+
+  /* Typed.js init */
+  if (typeof Typed !== "undefined") {
+    new Typed("#typed-name", {
+      strings: ["MD.Abdul Mumit Ibne Hossain"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true
+    });
+  }
+
+  /* Mobile navbar toggle */
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+
+    navMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+      });
+    });
+  } else {
+    console.error("Navbar elements not found");
+  }
+
+});

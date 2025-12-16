@@ -281,6 +281,7 @@ footer {
 
     .menu-toggle {
         display: flex;
+        z-index: 1001;
     }
 
     .nav {
@@ -302,6 +303,7 @@ footer {
         text-align: center;
     }
 }
+
 
 /* CV Download Section */
 
