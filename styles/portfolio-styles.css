@@ -458,30 +458,27 @@ header.hide {
 
 .social-links {
     display: grid;
-    /* use grid instead of flex */
+    
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 12px;
     max-width: 100%;
-    /* take full width on small screens */
+    
     margin: 20px auto 0;
     padding: 0 10px;
-    /* small horizontal padding */
 }
 
 .social-item {
     font-size: 0.85rem;
-    /* smaller font */
+    
     padding: 10px 12px;
-    /* smaller padding */
+   
     gap: 8px;
-    /* reduce icon-text gap */
     border-radius: 12px;
 
 }
 
 .social-item i {
     font-size: 2rem;
-    /* smaller icon */
 }
 
 /* Hover animation */
